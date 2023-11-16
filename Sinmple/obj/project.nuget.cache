@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "gtMjeq9kvw5AWbhIsaJqKYmzkZdxUk4BlwE0uUF24uvJnkzOGJwBjoKO8Y2axx+k3BGT9Wq5IAl9MTzD24King==",
   "success": true,
   "projectFilePath": "E:\\Orlando\\Sinmple\\Sinmple\\Sinmple.csproj",
+=======
+  "dgSpecHash": "wh1i9kIrx3ObwBjkW2kiNdAVZAYFud7q+ixBxOpq7sXNWxR4pCLENVCE2KbAPAvfSA7yh+c6m6mJxCwQxZIQbg==",
+  "success": true,
+  "projectFilePath": "E:\\subiendo\\Sinmple\\Sinmple\\Sinmple.csproj",
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
   "expectedPackageFiles": [
     "C:\\Users\\Alumno\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Alumno\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

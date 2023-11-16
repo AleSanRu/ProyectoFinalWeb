@@ -2,7 +2,10 @@
 
 @{
     ViewData["Title"] = "Index";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 }
 
 <h1>CREACION DE CUENTAS</h1>
@@ -19,9 +22,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Contraseña)
             </th>
+<<<<<<< HEAD
             <th>
                 @Html.DisplayNameFor(model => model.IdUsuario)
             </th>
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             <th></th>
         </tr>
     </thead>
@@ -35,12 +41,18 @@
                 @Html.DisplayFor(modelItem => item.Contraseña)
             </td>
             <td>
+<<<<<<< HEAD
                 @Html.DisplayFor(modelItem => item.IdUsuario)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdCuenta">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.IdCuenta">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.IdCuenta">Delete</a>
+=======
+                <a asp-action="Edit" asp-route-id="@item.Id_cuenta">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_cuenta">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_cuenta">Delete</a>
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </td>
         </tr>
 }

@@ -2,7 +2,10 @@
 
 @{
     ViewData["Title"] = "Edit";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 }
 
 <h1>Edit</h1>
@@ -13,7 +16,11 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<<<<<<< HEAD
             <input type="hidden" asp-for="IdMovimiento" />
+=======
+            <input type="hidden" asp-for="Id_movimiento" />
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             <div class="form-group">
                 <label asp-for="Cantidad" class="control-label"></label>
                 <input asp-for="Cantidad" class="form-control" />
@@ -30,6 +37,7 @@
                 <span asp-validation-for="Fecha" class="text-danger"></span>
             </div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label asp-for="Descripcion" class="control-label"></label>
                 <input asp-for="Descripcion" class="form-control" />
                 <span asp-validation-for="Descripcion" class="text-danger"></span>
@@ -38,6 +46,11 @@
                 <label asp-for="IdLoteFk" class="control-label"></label>
                 <input asp-for="IdLoteFk" class="form-control" />
                 <span asp-validation-for="IdLoteFk" class="text-danger"></span>
+=======
+                <label asp-for="id_lote" class="control-label"></label>
+                <input asp-for="id_lote" class="form-control" />
+                <span asp-validation-for="id_lote" class="text-danger"></span>
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -50,3 +63,9 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<<<<<<< HEAD
+=======
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa

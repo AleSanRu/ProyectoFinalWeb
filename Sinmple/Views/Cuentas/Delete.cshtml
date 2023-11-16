@@ -2,7 +2,10 @@
 
 @{
     ViewData["Title"] = "Delete";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 }
 
 <h1>Delete</h1>
@@ -24,6 +27,7 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Contraseña)
         </dd>
+<<<<<<< HEAD
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdUsuario)
         </dt>
@@ -34,6 +38,12 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdCuenta" />
+=======
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id_cuenta" />
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-action="Index">Back to List</a>
     </form>

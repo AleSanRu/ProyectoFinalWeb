@@ -2,7 +2,10 @@
 
 @{
     ViewData["Title"] = "Create";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 }
 
 <h1>Create</h1>
@@ -14,11 +17,14 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label asp-for="IdMovimiento" class="control-label"></label>
                 <input asp-for="IdMovimiento" class="form-control" />
                 <span asp-validation-for="IdMovimiento" class="text-danger"></span>
             </div>
             <div class="form-group">
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
                 <label asp-for="Cantidad" class="control-label"></label>
                 <input asp-for="Cantidad" class="form-control" />
                 <span asp-validation-for="Cantidad" class="text-danger"></span>
@@ -34,6 +40,7 @@
                 <span asp-validation-for="Fecha" class="text-danger"></span>
             </div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label asp-for="Descripcion" class="control-label"></label>
                 <input asp-for="Descripcion" class="form-control" />
                 <span asp-validation-for="Descripcion" class="text-danger"></span>
@@ -42,6 +49,11 @@
                 <label asp-for="IdLoteFk" class="control-label"></label>
                 <input asp-for="IdLoteFk" class="form-control" />
                 <span asp-validation-for="IdLoteFk" class="text-danger"></span>
+=======
+                <label asp-for="id_lote" class="control-label"></label>
+                <input asp-for="id_lote" class="form-control" />
+                <span asp-validation-for="id_lote" class="text-danger"></span>
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -54,3 +66,9 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<<<<<<< HEAD
+=======
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa

@@ -2,7 +2,10 @@
 
 @{
     ViewData["Title"] = "Index";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 }
 
 <h1>MOVIMIENTOS DE INVENTARIO</h1>
@@ -23,10 +26,14 @@
                 @Html.DisplayNameFor(model => model.Fecha)
             </th>
             <th>
+<<<<<<< HEAD
                 @Html.DisplayNameFor(model => model.Descripcion)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IdLoteFk)
+=======
+                @Html.DisplayNameFor(model => model.id_lote)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </th>
             <th></th>
         </tr>
@@ -44,6 +51,7 @@
                 @Html.DisplayFor(modelItem => item.Fecha)
             </td>
             <td>
+<<<<<<< HEAD
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
             <td>
@@ -53,6 +61,14 @@
                 <a asp-action="Edit" asp-route-id="@item.IdMovimiento">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.IdMovimiento">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.IdMovimiento">Delete</a>
+=======
+                @Html.DisplayFor(modelItem => item.id_lote)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_movimiento">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_movimiento">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_movimiento">Delete</a>
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </td>
         </tr>
 }

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\Orlando\\Sinmple\\Sinmple\\Sinmple.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "E:\\Orlando\\Sinmple\\Sinmple\\Sinmple.csproj",
         "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
         "outputPath": "E:\\Orlando\\Sinmple\\Sinmple\\obj\\",
+=======
+    "E:\\subiendo\\Sinmple\\Sinmple\\Sinmple.csproj": {}
+  },
+  "projects": {
+    "E:\\subiendo\\Sinmple\\Sinmple\\Sinmple.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\subiendo\\Sinmple\\Sinmple\\Sinmple.csproj",
+        "projectName": "Sinmple",
+        "projectPath": "E:\\subiendo\\Sinmple\\Sinmple\\Sinmple.csproj",
+        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+        "outputPath": "E:\\subiendo\\Sinmple\\Sinmple\\obj\\",
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -28,6 +42,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+=======
+          "C:\\Program Files\\dotnet\\library-packs": {},
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -98,7 +116,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         }
       }
     }

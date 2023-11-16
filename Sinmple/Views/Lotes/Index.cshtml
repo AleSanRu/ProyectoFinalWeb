@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Sinmple.Models.Lote>
 
 @{
+<<<<<<< HEAD
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -9,12 +10,25 @@
 
 <p>
     <a asp-action="Create">Create New</a>
+=======
+    ViewData["Title"] = "Índice";
+}
+
+<h1>REGISTRO DE LOTES</h1>
+
+<p>
+    <a asp-action="Create">Crear Nuevo</a>
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
+<<<<<<< HEAD
                 @Html.DisplayNameFor(model => model.NombreLote)
+=======
+                @Html.DisplayNameFor(model => model.Nombre_lote)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.FechaElaboracion)
@@ -26,15 +40,26 @@
                 @Html.DisplayNameFor(model => model.Cantidad)
             </th>
             <th>
+<<<<<<< HEAD
                 @Html.DisplayNameFor(model => model.IdUsuario)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IdProducto)
+=======
+                @Html.DisplayNameFor(model => model.Productos_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Almacen_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.usuario_id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -62,5 +87,38 @@
             </td>
         </tr>
 }
+=======
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre_lote)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaElaboracion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaVencimiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cantidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Productos_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Almacen_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.usuario_id)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id_lote">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id_lote">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id_lote">Eliminar</a>
+                </td>
+            </tr>
+        }
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
     </tbody>
 </table>

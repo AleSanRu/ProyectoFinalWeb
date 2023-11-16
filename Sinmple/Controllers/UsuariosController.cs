@@ -22,11 +22,21 @@ namespace Sinmple.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
+<<<<<<< HEAD
             return View(await _context.Usuario.ToListAsync());
         }
 
         // GET: Usuarios/Details/5
         public async Task<IActionResult> Details(string id)
+=======
+              return _context.Usuario != null ? 
+                          View(await _context.Usuario.ToListAsync()) :
+                          Problem("Entity set 'SinmpleContext.Usuario'  is null.");
+        }
+
+        // GET: Usuarios/Details/5
+        public async Task<IActionResult> Details(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.Usuario == null)
             {
@@ -34,7 +44,11 @@ namespace Sinmple.Controllers
             }
 
             var usuario = await _context.Usuario
+<<<<<<< HEAD
                 .FirstOrDefaultAsync(m => m.IdUsuario == id);
+=======
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             if (usuario == null)
             {
                 return NotFound();
@@ -54,7 +68,11 @@ namespace Sinmple.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> Create([Bind("IdUsuario,Nombre,Apellido,Email,Direccion,Cargo")] Usuario usuario)
+=======
+        public async Task<IActionResult> Create([Bind("Id_usuario,Nombre,Apellido,Correo,Direccion,Roles")] Usuario usuario)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +84,11 @@ namespace Sinmple.Controllers
         }
 
         // GET: Usuarios/Edit/5
+<<<<<<< HEAD
         public async Task<IActionResult> Edit(string id)
+=======
+        public async Task<IActionResult> Edit(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.Usuario == null)
             {
@@ -86,9 +108,15 @@ namespace Sinmple.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> Edit(string id, [Bind("IdUsuario,Nombre,Apellido,Email,Direccion,Cargo")] Usuario usuario)
         {
             if (id != usuario.IdUsuario)
+=======
+        public async Task<IActionResult> Edit(int id, [Bind("Id_usuario,Nombre,Apellido,Correo,Direccion,Roles")] Usuario usuario)
+        {
+            if (id != usuario.Id_usuario)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             {
                 return NotFound();
             }
@@ -102,7 +130,11 @@ namespace Sinmple.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
+<<<<<<< HEAD
                     if (!UsuarioExists(usuario.IdUsuario))
+=======
+                    if (!UsuarioExists(usuario.Id_usuario))
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
                     {
                         return NotFound();
                     }
@@ -117,7 +149,11 @@ namespace Sinmple.Controllers
         }
 
         // GET: Usuarios/Delete/5
+<<<<<<< HEAD
         public async Task<IActionResult> Delete(string id)
+=======
+        public async Task<IActionResult> Delete(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.Usuario == null)
             {
@@ -125,7 +161,11 @@ namespace Sinmple.Controllers
             }
 
             var usuario = await _context.Usuario
+<<<<<<< HEAD
                 .FirstOrDefaultAsync(m => m.IdUsuario == id);
+=======
+                .FirstOrDefaultAsync(m => m.Id_usuario == id);
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             if (usuario == null)
             {
                 return NotFound();
@@ -137,7 +177,11 @@ namespace Sinmple.Controllers
         // POST: Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> DeleteConfirmed(string id)
+=======
+        public async Task<IActionResult> DeleteConfirmed(int id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (_context.Usuario == null)
             {
@@ -148,14 +192,24 @@ namespace Sinmple.Controllers
             {
                 _context.Usuario.Remove(usuario);
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
+<<<<<<< HEAD
         private bool UsuarioExists(string id)
         {
             return _context.Usuario.Any(e => e.IdUsuario == id);
+=======
+        private bool UsuarioExists(int id)
+        {
+          return (_context.Usuario?.Any(e => e.Id_usuario == id)).GetValueOrDefault();
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         }
     }
 }

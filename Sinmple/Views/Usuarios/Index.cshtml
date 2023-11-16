@@ -2,10 +2,16 @@
 
 @{
     ViewData["Title"] = "Index";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>REGISTRO DE USUARIOS</h1>
+=======
+}
+
+<h1>Index</h1>
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -20,13 +26,21 @@
                 @Html.DisplayNameFor(model => model.Apellido)
             </th>
             <th>
+<<<<<<< HEAD
                 @Html.DisplayNameFor(model => model.Email)
+=======
+                @Html.DisplayNameFor(model => model.Correo)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Direccion)
             </th>
             <th>
+<<<<<<< HEAD
                 @Html.DisplayNameFor(model => model.Cargo)
+=======
+                @Html.DisplayNameFor(model => model.Roles)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </th>
             <th></th>
         </tr>
@@ -41,18 +55,31 @@
                 @Html.DisplayFor(modelItem => item.Apellido)
             </td>
             <td>
+<<<<<<< HEAD
                 @Html.DisplayFor(modelItem => item.Email)
+=======
+                @Html.DisplayFor(modelItem => item.Correo)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Direccion)
             </td>
             <td>
+<<<<<<< HEAD
                 @Html.DisplayFor(modelItem => item.Cargo)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdUsuario">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.IdUsuario">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.IdUsuario">Delete</a>
+=======
+                @Html.DisplayFor(modelItem => item.Roles)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id_usuario">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id_usuario">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id_usuario">Delete</a>
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             </td>
         </tr>
 }

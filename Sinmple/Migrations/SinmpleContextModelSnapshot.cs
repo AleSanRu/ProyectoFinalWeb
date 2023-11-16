@@ -24,6 +24,7 @@ namespace Sinmple.Migrations
 
             modelBuilder.Entity("Sinmple.Models.Almacen", b =>
                 {
+<<<<<<< HEAD
                     b.Property<string>("IdAlmacen")
                         .HasColumnType("nvarchar(450)");
 
@@ -34,12 +35,32 @@ namespace Sinmple.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdAlmacen");
+=======
+                    b.Property<int>("Id_almacen")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_almacen"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Ubicacion")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id_almacen");
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 
                     b.ToTable("Almacen");
                 });
 
             modelBuilder.Entity("Sinmple.Models.Cuenta", b =>
                 {
+<<<<<<< HEAD
                     b.Property<string>("IdCuenta")
                         .HasColumnType("nvarchar(450)");
 
@@ -58,12 +79,30 @@ namespace Sinmple.Migrations
                     b.HasKey("IdCuenta");
 
                     b.HasIndex("IdUsuarioNavigationIdUsuario");
+=======
+                    b.Property<int>("Id_cuenta")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_cuenta"));
+
+                    b.Property<string>("Contraseña")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Usuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_cuenta");
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 
                     b.ToTable("Cuenta");
                 });
 
             modelBuilder.Entity("Sinmple.Models.Lote", b =>
                 {
+<<<<<<< HEAD
                     b.Property<string>("IdLote")
                         .HasColumnType("nvarchar(450)");
 
@@ -96,12 +135,45 @@ namespace Sinmple.Migrations
                     b.HasIndex("IdProductoNavigationIdProducto");
 
                     b.HasIndex("IdUsuarioNavigationIdUsuario");
+=======
+                    b.Property<int>("Id_lote")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_lote"));
+
+                    b.Property<int>("Almacen_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaElaboracion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaVencimiento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre_lote")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Productos_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("usuario_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_lote");
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 
                     b.ToTable("Lote");
                 });
 
             modelBuilder.Entity("Sinmple.Models.MovimientosInventario", b =>
                 {
+<<<<<<< HEAD
                     b.Property<string>("IdMovimiento")
                         .HasColumnType("nvarchar(450)");
 
@@ -126,12 +198,35 @@ namespace Sinmple.Migrations
                     b.HasKey("IdMovimiento");
 
                     b.HasIndex("IdLoteFkNavigationIdLote");
+=======
+                    b.Property<int>("Id_movimiento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_movimiento"));
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TipoMovimiento")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("id_lote")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_movimiento");
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 
                     b.ToTable("MovimientosInventario");
                 });
 
             modelBuilder.Entity("Sinmple.Models.Producto", b =>
                 {
+<<<<<<< HEAD
                     b.Property<string>("IdProducto")
                         .HasColumnType("nvarchar(450)");
 
@@ -142,12 +237,32 @@ namespace Sinmple.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdProducto");
+=======
+                    b.Property<int>("Productos_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Productos_id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("tipo")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Productos_id");
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 
                     b.ToTable("Producto");
                 });
 
             modelBuilder.Entity("Sinmple.Models.Usuario", b =>
                 {
+<<<<<<< HEAD
                     b.Property<string>("IdUsuario")
                         .HasColumnType("nvarchar(450)");
 
@@ -220,6 +335,41 @@ namespace Sinmple.Migrations
 
                     b.Navigation("Lotes");
                 });
+=======
+                    b.Property<int>("Id_usuario")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_usuario"));
+
+                    b.Property<string>("Apellido")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Direccion")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Roles")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id_usuario");
+
+                    b.ToTable("Usuario");
+                });
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 #pragma warning restore 612, 618
         }
     }

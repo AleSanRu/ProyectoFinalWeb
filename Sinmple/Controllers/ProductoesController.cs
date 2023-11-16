@@ -22,11 +22,21 @@ namespace Sinmple.Controllers
         // GET: Productoes
         public async Task<IActionResult> Index()
         {
+<<<<<<< HEAD
             return View(await _context.Producto.ToListAsync());
         }
 
         // GET: Productoes/Details/5
         public async Task<IActionResult> Details(string id)
+=======
+              return _context.Producto != null ? 
+                          View(await _context.Producto.ToListAsync()) :
+                          Problem("Entity set 'SinmpleContext.Producto'  is null.");
+        }
+
+        // GET: Productoes/Details/5
+        public async Task<IActionResult> Details(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.Producto == null)
             {
@@ -34,7 +44,11 @@ namespace Sinmple.Controllers
             }
 
             var producto = await _context.Producto
+<<<<<<< HEAD
                 .FirstOrDefaultAsync(m => m.IdProducto == id);
+=======
+                .FirstOrDefaultAsync(m => m.Productos_id == id);
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             if (producto == null)
             {
                 return NotFound();
@@ -54,7 +68,11 @@ namespace Sinmple.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> Create([Bind("IdProducto,Nombre,Tipo")] Producto producto)
+=======
+        public async Task<IActionResult> Create([Bind("Productos_id,Nombre,tipo")] Producto producto)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +84,11 @@ namespace Sinmple.Controllers
         }
 
         // GET: Productoes/Edit/5
+<<<<<<< HEAD
         public async Task<IActionResult> Edit(string id)
+=======
+        public async Task<IActionResult> Edit(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.Producto == null)
             {
@@ -86,9 +108,15 @@ namespace Sinmple.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> Edit(string id, [Bind("IdProducto,Nombre,Tipo")] Producto producto)
         {
             if (id != producto.IdProducto)
+=======
+        public async Task<IActionResult> Edit(int id, [Bind("Productos_id,Nombre,tipo")] Producto producto)
+        {
+            if (id != producto.Productos_id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             {
                 return NotFound();
             }
@@ -102,7 +130,11 @@ namespace Sinmple.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
+<<<<<<< HEAD
                     if (!ProductoExists(producto.IdProducto))
+=======
+                    if (!ProductoExists(producto.Productos_id))
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
                     {
                         return NotFound();
                     }
@@ -117,7 +149,11 @@ namespace Sinmple.Controllers
         }
 
         // GET: Productoes/Delete/5
+<<<<<<< HEAD
         public async Task<IActionResult> Delete(string id)
+=======
+        public async Task<IActionResult> Delete(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.Producto == null)
             {
@@ -125,7 +161,11 @@ namespace Sinmple.Controllers
             }
 
             var producto = await _context.Producto
+<<<<<<< HEAD
                 .FirstOrDefaultAsync(m => m.IdProducto == id);
+=======
+                .FirstOrDefaultAsync(m => m.Productos_id == id);
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             if (producto == null)
             {
                 return NotFound();
@@ -137,7 +177,11 @@ namespace Sinmple.Controllers
         // POST: Productoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> DeleteConfirmed(string id)
+=======
+        public async Task<IActionResult> DeleteConfirmed(int id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (_context.Producto == null)
             {
@@ -148,14 +192,24 @@ namespace Sinmple.Controllers
             {
                 _context.Producto.Remove(producto);
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
+<<<<<<< HEAD
         private bool ProductoExists(string id)
         {
             return _context.Producto.Any(e => e.IdProducto == id);
+=======
+        private bool ProductoExists(int id)
+        {
+          return (_context.Producto?.Any(e => e.Productos_id == id)).GetValueOrDefault();
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         }
     }
 }

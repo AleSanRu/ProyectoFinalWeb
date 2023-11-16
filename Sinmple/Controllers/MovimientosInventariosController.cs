@@ -22,11 +22,21 @@ namespace Sinmple.Controllers
         // GET: MovimientosInventarios
         public async Task<IActionResult> Index()
         {
+<<<<<<< HEAD
             return View(await _context.MovimientosInventario.ToListAsync());
         }
 
         // GET: MovimientosInventarios/Details/5
         public async Task<IActionResult> Details(string id)
+=======
+              return _context.MovimientosInventario != null ? 
+                          View(await _context.MovimientosInventario.ToListAsync()) :
+                          Problem("Entity set 'SinmpleContext.MovimientosInventario'  is null.");
+        }
+
+        // GET: MovimientosInventarios/Details/5
+        public async Task<IActionResult> Details(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.MovimientosInventario == null)
             {
@@ -34,7 +44,11 @@ namespace Sinmple.Controllers
             }
 
             var movimientosInventario = await _context.MovimientosInventario
+<<<<<<< HEAD
                 .FirstOrDefaultAsync(m => m.IdMovimiento == id);
+=======
+                .FirstOrDefaultAsync(m => m.Id_movimiento == id);
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             if (movimientosInventario == null)
             {
                 return NotFound();
@@ -54,7 +68,11 @@ namespace Sinmple.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> Create([Bind("IdMovimiento,Cantidad,TipoMovimiento,Fecha,Descripcion,IdLoteFk")] MovimientosInventario movimientosInventario)
+=======
+        public async Task<IActionResult> Create([Bind("Id_movimiento,Cantidad,TipoMovimiento,Fecha,id_lote")] MovimientosInventario movimientosInventario)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +84,11 @@ namespace Sinmple.Controllers
         }
 
         // GET: MovimientosInventarios/Edit/5
+<<<<<<< HEAD
         public async Task<IActionResult> Edit(string id)
+=======
+        public async Task<IActionResult> Edit(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.MovimientosInventario == null)
             {
@@ -86,9 +108,15 @@ namespace Sinmple.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> Edit(string id, [Bind("IdMovimiento,Cantidad,TipoMovimiento,Fecha,Descripcion,IdLoteFk")] MovimientosInventario movimientosInventario)
         {
             if (id != movimientosInventario.IdMovimiento)
+=======
+        public async Task<IActionResult> Edit(int id, [Bind("Id_movimiento,Cantidad,TipoMovimiento,Fecha,id_lote")] MovimientosInventario movimientosInventario)
+        {
+            if (id != movimientosInventario.Id_movimiento)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             {
                 return NotFound();
             }
@@ -102,7 +130,11 @@ namespace Sinmple.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
+<<<<<<< HEAD
                     if (!MovimientosInventarioExists(movimientosInventario.IdMovimiento))
+=======
+                    if (!MovimientosInventarioExists(movimientosInventario.Id_movimiento))
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
                     {
                         return NotFound();
                     }
@@ -117,7 +149,11 @@ namespace Sinmple.Controllers
         }
 
         // GET: MovimientosInventarios/Delete/5
+<<<<<<< HEAD
         public async Task<IActionResult> Delete(string id)
+=======
+        public async Task<IActionResult> Delete(int? id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (id == null || _context.MovimientosInventario == null)
             {
@@ -125,7 +161,11 @@ namespace Sinmple.Controllers
             }
 
             var movimientosInventario = await _context.MovimientosInventario
+<<<<<<< HEAD
                 .FirstOrDefaultAsync(m => m.IdMovimiento == id);
+=======
+                .FirstOrDefaultAsync(m => m.Id_movimiento == id);
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             if (movimientosInventario == null)
             {
                 return NotFound();
@@ -137,7 +177,11 @@ namespace Sinmple.Controllers
         // POST: MovimientosInventarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<IActionResult> DeleteConfirmed(string id)
+=======
+        public async Task<IActionResult> DeleteConfirmed(int id)
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         {
             if (_context.MovimientosInventario == null)
             {
@@ -148,14 +192,24 @@ namespace Sinmple.Controllers
             {
                 _context.MovimientosInventario.Remove(movimientosInventario);
             }
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
+<<<<<<< HEAD
         private bool MovimientosInventarioExists(string id)
         {
             return _context.MovimientosInventario.Any(e => e.IdMovimiento == id);
+=======
+        private bool MovimientosInventarioExists(int id)
+        {
+          return (_context.MovimientosInventario?.Any(e => e.Id_movimiento == id)).GetValueOrDefault();
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
         }
     }
 }

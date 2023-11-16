@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+=======
+<Project Sdk="Microsoft.NET.Sdk.Web">
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>

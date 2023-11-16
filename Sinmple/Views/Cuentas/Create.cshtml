@@ -2,7 +2,10 @@
 
 @{
     ViewData["Title"] = "Create";
+<<<<<<< HEAD
     Layout = "~/Views/Shared/_Layout.cshtml";
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
 }
 
 <h1>Create</h1>
@@ -14,11 +17,14 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label asp-for="IdCuenta" class="control-label"></label>
                 <input asp-for="IdCuenta" class="form-control" />
                 <span asp-validation-for="IdCuenta" class="text-danger"></span>
             </div>
             <div class="form-group">
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
                 <label asp-for="Usuario" class="control-label"></label>
                 <input asp-for="Usuario" class="form-control" />
                 <span asp-validation-for="Usuario" class="text-danger"></span>
@@ -29,11 +35,14 @@
                 <span asp-validation-for="Contraseña" class="text-danger"></span>
             </div>
             <div class="form-group">
+<<<<<<< HEAD
                 <label asp-for="IdUsuario" class="control-label"></label>
                 <input asp-for="IdUsuario" class="form-control" />
                 <span asp-validation-for="IdUsuario" class="text-danger"></span>
             </div>
             <div class="form-group">
+=======
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -44,3 +53,9 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<<<<<<< HEAD
+=======
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+>>>>>>> 7f5891263b969f04d49c94ffaf374eeea2c2c7aa
